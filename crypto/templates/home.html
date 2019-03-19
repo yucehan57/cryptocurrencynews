@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Main Page
+{% endblock %}
+
+{% block content %}
+  <h6>Latest Crypto Currency News:</h6>
+    {% for ea in api.Data %}
+      <p><li>{{ea.title}}</p>
+      <p>{{ea.body}}</p>
+      </li>
+    {% endfor %}
+
+    {{api.Data}}
+{% endblock %}
