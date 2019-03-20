@@ -5,12 +5,55 @@
 {% endblock %}
 
 {% block content %}
-  <h6>Latest Crypto Currency News:</h6>
-    {% for ea in api.Data %}
-      <p><li>{{ea.title}}</p>
-      <p>{{ea.body}}</p>
-      </li>
-    {% endfor %}
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 style="text-align:center;" class="display-4">Crypto Currency News</h1>
+    <p style="text-align:center;" class="lead">Get your latest crypto currency and blockchain news here!</p>
+    <table class="table table-dark table-bordered table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Currency</th>
+        <th scope="col">Price</th>
+        <th scope="col">Daily High</th>
+        <th scope="col">Daily Low</th>
+        <th scope="col">Market Cap</th>
+        <th scope="col">24h fluctuation</th>
+      </tr>
+    </thead>
 
-    {{api.Data}}
+        {% for key,value in price.DISPLAY.items %}
+          <tr>
+            <td>{{key}}</td>
+            <td>{{value.USD.PRICE}}</td>
+            <td>{{value.USD.HIGHDAY}}</td>
+            <td>{{value.USD.LOWDAY}}</td>
+            <td>{{value.USD.MKTCAP}}</td>
+            <td>{{value.USD.CHANGE24HOUR}}</td>
+          </tr>
+          <hr>
+        {% endfor %}
+
+
+      </table>
+
+  </div>
+</div>
+
+<div class="row">
+  {% for ea in api.Data %}
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+        <img src="{{ ea.imageurl }}" class="" alt="{{ ea.source }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ ea.title }}</h5>
+            <p class="card-text">{{ ea.body }}</p>
+            <a href="{{ ea.url }}" class="btn btn-primary">Read more</a>
+          </div>
+      </div>
+    </div>
+
+  {% endfor %}
+</div>
+
+
 {% endblock %}
