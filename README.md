@@ -1,4 +1,4 @@
-# cryptocurrencynews
+# Crypto Currency News
 
 Use of Crypto Compare API to fetch latest Crpyto Currency related news and display them
 
