@@ -1,9 +1,6 @@
 # cryptocurrencynews
 
-
-
-What does it do? To be added.
-
+Use of Crypto Compare API to fetch latest Crpyto Currency related news and display them
 
 
 ### Requirements
@@ -17,7 +14,7 @@ Clone the repo, create virtual environment:
 
     $ git clone https://github.com/yucehan57/libraryproject.git
     $ virtualenv env
-    $ source/env/bin/activate
+    $ source /env/bin/activate
 
 Environment is set up. To proceed, you begin by making necessary migrations:
 
