@@ -1,6 +1,6 @@
 # Crypto Currency News
 
-Use of Crypto Compare API to fetch latest Crpyto Currency related news and display them
+Use of Crypto Compare API to fetch latest Crpyto Currency related news and display them to the end user
 
 
 ### Requirements
